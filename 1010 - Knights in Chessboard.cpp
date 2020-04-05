@@ -32,23 +32,23 @@ int main()
         int r,c;
         cin >> r >> c;
         cout << "Case "<<i<<": ";
-        if(r%2==0 && c%2==0 && r > 2 && c > 2){
+        if(r%2==0 && c%2==0 && r > 2 && c > 2){  // if both are EVEN and greater than 2
             cout << (r*c)/2 <<endl;
         }
-        else if(r%2==1 && c%2==1 && r>2 && c >2){
+        else if(r%2==1 && c%2==1 && r>2 && c >2){ // if both are ODD and greater than 2
             cout << ((r*c)/2)+1 <<endl;
         }
-        else if(r == 1 || c == 1) cout << r*c <<endl;
-        else if(r==2 || c == 2){
-            if(r==2 && c==2) cout<<4<<endl;
+        else if(r == 1 || c == 1) cout << r*c <<endl; // if any row or column is 1
+        else if(r==2 || c == 2){                 /// if any row or column is 2 - Most important test case
+            if(r==2 && c==2) cout<<4<<endl;      // if both are 2
             else {
-                int m = (r * c)/2;
-                if(m%4==0) cout <<m <<endl;
-                else if(m%2==0) cout<<m+2<<endl;
-                else cout << m + 1 <<endl;
+                int m = (r * c)/2;          
+                if(m%4==0) cout <<m <<endl;      // Here one is 2 , if other is devided by 4 
+                else if(m%2==0) cout<<m+2<<endl; // Here one is 2 , if other is EVEN
+                else cout << m + 1 <<endl;       // Here one is 2 , if other is ODD
             }
         }
-        else cout << (r*c) / 2 <<endl ;
+        else cout << (r*c) / 2 <<endl ;     // rest of cases , simply half of the product of row and column
 
     }
     return 0;
