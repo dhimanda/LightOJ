@@ -72,11 +72,11 @@ void dhimanda(){
 	double area = sqrt(s*(s-a)*(s-b)*(s-c)) ; 
 
 	double areaA=0.5*r1*r1*acos((c*c+a*a-b*b)/(2*c*a));
-  double areaB=0.5*r2*r2*acos((b*b+a*a-c*c)/(2*a*b));
-  double areaC=0.5*r3*r3*acos((c*c+b*b-a*a)/(2*b*c));
-  double ans  = area - (areaA+areaB+areaC) ; 
+    double areaB=0.5*r2*r2*acos((b*b+a*a-c*c)/(2*a*b));
+    double areaC=0.5*r3*r3*acos((c*c+b*b-a*a)/(2*b*c));
+    double ans  = area - (areaA+areaB+areaC) ; 
 
-  printf("%.6f\n" , ans);
+    printf("%.6f\n" , ans);
 }
 
 // Contact : chessdhiman@gmail.com
